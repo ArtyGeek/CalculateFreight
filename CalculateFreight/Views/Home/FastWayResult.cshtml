@@ -1,0 +1,16 @@
+﻿@model CalculateFreight.Models.Result
+@{
+    ViewBag.Title = "Fast Way Post Result";
+}
+<title>@ViewBag.Title</title>
+
+<div class="result">
+    @if (Model.TotalCost != "Please enter a valid From postcode")
+    {
+        <h2>Total Charge: @Model.TotalCost $</h2>
+    }
+    else
+    {
+        <h2>Please enter a valid From postcode</h2>
+    }
+</div>

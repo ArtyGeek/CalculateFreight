@@ -1,0 +1,44 @@
+﻿@model CalculateFreight.Models.FastWayPostModel
+@{
+    ViewBag.Title = "Fast Way Couriers";
+}
+
+<title>@ViewBag.Title</title>
+
+<div class="australia-post">
+    @using (Html.BeginForm("FastWayResult", "Home"))
+    {
+        @Html.ValidationSummary(true)
+
+        <div>
+            @Html.EditorFor(x => x.RFCode)
+            @Html.LabelFor(x => x.RFCode)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.RFCode)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Suburb)
+            @Html.LabelFor(x => x.Suburb)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.Suburb)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.DestPostCode)
+            @Html.LabelFor(x => x.DestPostCode)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.DestPostCode)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Weight)
+            @Html.LabelFor(x => x.Weight)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.Weight)
+            </div>
+        </div>
+
+        <input type="submit" value="Calculate" class="submit" />
+    }
+</div>

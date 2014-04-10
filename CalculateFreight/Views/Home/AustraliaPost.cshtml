@@ -1,0 +1,57 @@
+﻿@using RestSharp
+@model CalculateFreight.Models.AustraliaPostModel
+@{
+    ViewBag.Title = "Australia Post";
+}
+<title>@ViewBag.Title</title>
+
+<div class="australia-post">
+    @using (Html.BeginForm("AustraliaPostResult", "Home"))
+    {
+          @Html.ValidationSummary(true)
+        
+        <div>
+            @Html.EditorFor(x => x.FromPostCode)
+            @Html.LabelFor(x => x.FromPostCode, "From Post Code")
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.FromPostCode)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.ToPostCode)
+            @Html.LabelFor(x => x.ToPostCode, "To Post Code")
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.ToPostCode)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Length)
+            @Html.LabelFor(x => x.Length)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.Length)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Width)
+            @Html.LabelFor(x => x.Width)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.Width)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Height)
+            @Html.LabelFor(x => x.Height)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x => x.Height)
+            </div>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Weight)
+            @Html.LabelFor(x => x.Weight)
+            <div class="field-validation-error">
+                @Html.ValidationMessageFor(x=>x.Weight)
+             </div>
+        </div>
+        <input type="submit" value="Calculate" class="submit"/>
+    }
+</div>

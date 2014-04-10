@@ -1,0 +1,40 @@
+﻿.content {
+    width: 320px;
+    height: 255px;
+    padding: 30px;
+}
+.form {
+     width: 250px;
+     height: 155px;
+     padding: 20px;
+     border: 1px solid #696969;
+     border-radius: 5.51px;
+}
+
+.australia-post {
+    width: 355px;
+    border: 1px solid #696969;
+    border-radius: 5.51px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.text-box {
+    margin: 5px 0;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+.submit {
+    margin-top: 15px;
+}
+
+.result {
+    width: 475px;
+    height: 255px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
